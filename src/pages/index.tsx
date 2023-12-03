@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { HeadFC, navigate } from "gatsby"
 import { useState } from "react"
 import { getPasswords } from '../passwords/getPasswords';
@@ -61,11 +61,13 @@ const IndexPage = () => {
   const [password, setPassword] = useState('');
   const { canEnter, setCanEnter } = useContext(CanEnterContext);
 
-  const onClick = () => {
+  useEffect(() => { 
     if (typeof window !== 'undefined') {
-      window.sessionStorage.setItem("currentPassword", password);
+      setCanEnter(getPasswords().find((codeword) => codeword === password) ? true : false);
     }
-    setCanEnter(getPasswords().find((codeword) => codeword === password) ? true : false);
+  }, [canEnter, password]);
+
+  const onClick = () => {
     if(canEnter) {
       navigate('/wedding');
     }

@@ -4,12 +4,19 @@ import { useState } from "react"
 import { getPasswords } from '../passwords/getPasswords';
 import styled, { createGlobalStyle } from 'styled-components';
 import Couple from '../images/couple-standing.jpeg';
+import CoupleLaughing from '../images/couple-laughing.jpeg';
 import { CanEnterContext } from '../context/can-enter-context';
 
 const GlobalStyle = createGlobalStyle`
 body {
     background-image: url(${Couple});
     background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 1024px){
+      background-image: url(${CoupleLaughing});
+      background-color: #3C1114;
+      background-position-y: 100px;
+  }
 }
 `
 
@@ -37,6 +44,7 @@ const Subheadline = styled.h2`
     margin-bottom: 0;
     @media screen and (max-width: 1024px){
       font-size: 20px;
+      color: white;
   }
 `;
 
@@ -55,6 +63,10 @@ const Button = styled.button`
   margin-left: 10px;
   color: white;
   padding: 5px;
+  @media screen and (max-width: 1024px){
+    color: #3C1114;
+    background-color: white;
+}
 `
 
 const IndexPage = () => {

@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
@@ -28,6 +28,7 @@
     "gatsby-source-filesystem": "^5.9.0",
     "gatsby-source-wordpress": "^7.9.0",
     "gatsby-transformer-sharp": "^5.9.0",
+    "gh-pages": "^6.1.0",
     "js-confetti": "^0.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

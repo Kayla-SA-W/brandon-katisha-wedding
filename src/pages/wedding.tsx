@@ -7,10 +7,28 @@ import { Timeline } from "../components/timeline/timeline";
 import { BridalParty } from "../components/bridal-party";
 import { RSVP } from "../components/rsvp";
 import { CanEnterContext } from "../context/can-enter-context";
+import styled from "styled-components";
+import { navigate } from "gatsby";
+
+const Text = styled.p`
+    font-family: 'Montserrat';
+    font-size: 20px;
+`
+
+const Button = styled.button`
+  font-family: 'Montserrat';
+  width: 100px;
+  background-color: #3C1114;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: white;
+  padding: 5px;
+`
 
 const Wedding = () => {
     const { canEnter } = useContext(CanEnterContext);
-    if (typeof window !== 'undefined' && canEnter) {
+    if (canEnter) {
         return (
             <main>
                 <BranKatish>
@@ -28,7 +46,12 @@ const Wedding = () => {
             </main>
         )
     }
-    return <div/>
+    return (
+        <>
+            <Text>We had trouble loading the website. Please Try again</Text>
+            <Button onClick={() => navigate('/')}>Home</Button>
+        </>
+    )
 };
 
 export default Wedding;

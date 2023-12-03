@@ -68,9 +68,7 @@ const IndexPage = () => {
   }, [canEnter, password]);
 
   const onClick = () => {
-    if(canEnter) {
-      navigate('/wedding');
-    }
+    navigate('/wedding');
   }
 
   return (

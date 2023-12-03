@@ -11,22 +11,22 @@ import { CanEnterContext } from "../context/can-enter-context";
 
 const Wedding = () => {
     const { canEnter } = useContext(CanEnterContext);
-    if(canEnter) {
+    if (typeof window !== 'undefined' && canEnter) {
         return (
             <main>
-            <BranKatish>
-              <Intro />
-              <Nav />
-              <WeddingDetails />
-              <GeometricShape>
-                <Timeline />
-              </GeometricShape>
-            <HorizontalContainer>
-              <BridalParty />
-            </HorizontalContainer>
-            <RSVP />
-            </BranKatish>
-          </main>
+                <BranKatish>
+                    <Intro />
+                    <Nav />
+                    <WeddingDetails />
+                    <GeometricShape>
+                        <Timeline />
+                    </GeometricShape>
+                    <HorizontalContainer>
+                        <BridalParty />
+                    </HorizontalContainer>
+                    <RSVP />
+                </BranKatish>
+            </main>
         )
     } else {
         navigate('/index');

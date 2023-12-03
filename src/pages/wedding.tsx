@@ -6,7 +6,6 @@ import { WeddingDetails } from "../components/wedding-details";
 import { Timeline } from "../components/timeline/timeline";
 import { BridalParty } from "../components/bridal-party";
 import { RSVP } from "../components/rsvp";
-import { navigate } from "gatsby";
 import { CanEnterContext } from "../context/can-enter-context";
 
 const Wedding = () => {
@@ -28,9 +27,8 @@ const Wedding = () => {
                 </BranKatish>
             </main>
         )
-    } else {
-        navigate('/index');
     }
+    return <div/>
 };
 
 export default Wedding;

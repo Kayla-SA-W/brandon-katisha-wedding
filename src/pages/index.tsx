@@ -1,9 +1,16 @@
 import React from 'react';
-import { HeadFC, navigate } from "gatsby"
+import { HeadFC } from "gatsby"
 import { useState } from "react"
 import { getPasswords } from '../passwords/getPasswords';
 import styled, { createGlobalStyle } from 'styled-components';
 import Couple from '../images/couple-standing.jpeg';
+import { Intro } from "../components/intro";
+import { BranKatish, GeometricShape, HorizontalContainer } from "../components/common";
+import { Timeline } from "../components/timeline/timeline";
+import { WeddingDetails } from "../components/wedding-details";
+import { BridalParty } from "../components/bridal-party";
+import { Nav } from "../components/nav";
+import { RSVP } from "../components/rsvp";
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -58,19 +65,32 @@ const Button = styled.button`
 
 const IndexPage = () => {
   const [password, setPassword] = useState('');
+  const [canEnter, setCanEnter] = useState(false);
 
   const onClick = () => {
-    if (typeof window !== 'undefined') {
-      window.sessionStorage.setItem("currentPassword", password);
-    }
-    const canEnter = getPasswords().find((codeword) => codeword === password) ? true : false;
-    if(canEnter) {
-      navigate('/wedding');
-    }
+   setCanEnter(getPasswords().find((codeword) => codeword === password) ? true : false);
   }
 
   return (
-    <Main>
+    <>
+    {
+      canEnter ? (
+        <main>
+        <BranKatish>
+          <Intro />
+          <Nav />
+          <WeddingDetails />
+          <GeometricShape>
+            <Timeline />
+          </GeometricShape>
+        <HorizontalContainer>
+          <BridalParty />
+        </HorizontalContainer>
+        <RSVP />
+        </BranKatish>
+      </main>
+      ) : (
+        <Main>
       <GlobalStyle />
       {/* <Title> Brandon & Katisha's Wedding Website </Title> */}
       <Subheadline>Please enter the password</Subheadline>
@@ -81,6 +101,9 @@ const IndexPage = () => {
       <Button onClick={onClick}>Enter</Button>
       </div>
     </Main>
+      )
+    }
+    </>
   )
 }
 

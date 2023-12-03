@@ -60,7 +60,7 @@ const IndexPage = () => {
   const [password, setPassword] = useState('');
 
   const onClick = () => {
-    sessionStorage.setItem("currentPassword", password);
+    window.sessionStorage.setItem("currentPassword", password);
     const canEnter = getPasswords().find((codeword) => codeword === password) ? true : false;
     if(canEnter) {
       navigate('/wedding');

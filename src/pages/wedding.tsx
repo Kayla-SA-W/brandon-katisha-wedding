@@ -9,7 +9,7 @@ import { Nav } from "../components/nav";
 import { RSVP } from "../components/rsvp";
 
 const WeddingPage = () => {
-  const currentLogin = window.sessionStorage.getItem('currentPassword');
+  const currentLogin = typeof window !== 'undefined' ? window.sessionStorage.getItem('currentPassword') : null;
   if (currentLogin) {
     return (
       <main>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HeadFC } from "gatsby"
 import { useState } from "react"
 import { getPasswords } from '../passwords/getPasswords';
@@ -71,6 +71,7 @@ const IndexPage = () => {
    setCanEnter(getPasswords().find((codeword) => codeword === password) ? true : false);
   }
 
+  useEffect(() => {}, [canEnter]);
   return (
     <>
     {

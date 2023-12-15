@@ -23,6 +23,7 @@ const TheRing = styled.img`
     height: 300px;
     @media screen and (max-width: 1024px){
         height: fit-content;
+        width: 101%
     }
 `
 
@@ -53,7 +54,7 @@ export const WeddingDetails = () => (
             <Box>
             <Title> The Wedding </Title>
             <Hr />
-            <Text bottom>Avinir</Text>
+            <Text bottom>Avenir</Text>
             <Text top>1601 Main Street, Walpole, MA 02081</Text>
             <Text bottom>Thursday, July 25th, 2024</Text>
             <Text top>4:30 PM</Text>

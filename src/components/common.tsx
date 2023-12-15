@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import geo1 from '../images/geometric-background1.png'
-import BK from '../images/couple-image.jpeg';
+import BK from '../images/couple-left.jpeg';
 
 export const HorizontalContainer = styled.div`
     background-color: rgba(255,255,255, 0.7);
@@ -28,11 +28,12 @@ export const GeometricShape = styled.div`
 
 export const BranKatish = styled.div`
     background-image: url(${BK});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    position: fixed;
     width: 100vw;
-    height: max-content;
-    margin: -10px;
+    height: 107vh;
+    z-index: -1;
 `
 
 export const VerticalContainer = styled.div`

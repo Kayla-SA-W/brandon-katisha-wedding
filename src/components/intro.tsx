@@ -36,8 +36,8 @@ const NumberBox = styled.div`
     margin: 30px 0;
     cursor: pointer;
     @media screen and (max-width: 1024px){
-        width: 25%;
-        height: 25%;
+        width: 80%;
+        height: 50%;
         padding: 10px;
     }
 `
@@ -45,10 +45,12 @@ const NumberBox = styled.div`
 const Box = styled.div`
     display: flex;
     flex-direction: row;
-    justif-content: space-evenly;
+    justify-content: space-evenly;
     gap: 30px;
     @media screen and (max-width: 1024px){
         gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 `
 
@@ -112,7 +114,7 @@ return (
                     <Celebrate>Seconds</Celebrate>
                 </NumberBox>
             </Box>
-            <Celebrate>Until We Get Married</Celebrate>
+            <Celebrate>Until We Are #ForeverPhillips</Celebrate>
         </Names>
     </>
 )

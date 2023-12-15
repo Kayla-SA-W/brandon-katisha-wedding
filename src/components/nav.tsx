@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+    position: fixed;
     width: 100vw;
     background-color: white;
     display: flex;
@@ -11,7 +12,7 @@ const Container = styled.div`
     gap: 30px;
     justify-content: center;
     padding: 25px 0;
-    @media screen and (max-width: 1024px){
+   @media screen and (max-width: 1024px){
         width: 100%;
         gap: 15px; 
     }
@@ -22,6 +23,9 @@ const Button = styled(Link)`
     font-size: 15px;
     color: #3C1114;
     text-decoration: none;
+    @media screen and (max-width: 1024px){
+        font-size: 12px;
+    }
 `
 const Photos = styled(Button)`
 @media screen and (max-width: 1024px){
@@ -37,17 +41,8 @@ const HR = styled.hr`
     }
 `
 
-const HrMobile = styled.hr`
-    border: 1px solid #3C1114;
-    width: 90%;
-    @media screen and (min-width: 1024px){
-        display: none;  
-    }
-`
-
 export const Nav = () => (
     <>
-        <HrMobile />
         <Container>
             <HR />
             <Button to='#Details'>Wedding Details</Button>
@@ -57,7 +52,6 @@ export const Nav = () => (
             <Button to='#RSVP'>RSVP</Button>
             <HR />
         </Container>
-        <HrMobile />
     </>
 
 )

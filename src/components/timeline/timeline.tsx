@@ -41,7 +41,7 @@ const Title = styled.h3`
 export const Timeline = () => {
     return (
         <Container id="Photos">
-            <Title>Nine Years in the Making</Title>
+            <Title>Ten Years in the Making</Title>
             {/** time line */}
             { /** mini photos with year over them. hover/click enlargens */}
             <LineContainer>

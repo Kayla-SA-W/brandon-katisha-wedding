@@ -35,10 +35,12 @@ const Container = styled.div`
 const Grid = styled.div`
     display: grid;
     grid-template-rows: 200px 200px 200px;
+    gap: 10px;
     grid-template-columns: 200px 200px 200px;
     @media screen and (max-width: 1024px){
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(2, 1fr);
+        gap: 0;
     }
 `
 
@@ -46,7 +48,11 @@ const Img = styled.img<{ honor?: boolean }>`
     height: 200px;
     width: 200px;
     cursor: pointer;
-    background-color: ${(props) => (props.honor ? 'white' : '')}
+    background-color: ${(props) => (props.honor ? 'white' : '')};
+    @media screen and (max-width: 1024px){
+        height: 100%;
+        width: 50vw;
+    }
 `
 
 const Title = styled.h4`
@@ -93,6 +99,8 @@ const Label = styled.p`
 `
 
 const CoupleImg = styled.img`
+    height: 200px;
+    width: 200px;
 @media screen and (max-width: 1024px){
     display: none;
 }
@@ -110,25 +118,25 @@ export const BridalParty = () => {
         <Container id="BridalParty">
             <Title> Bridal Party </Title>
             <Grid>
-                <div>
-                    <Img src={David} id="david-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="david"> David Tang </Banner>
+                <div style={{ border: '1px solid grey' }}>
+                    <Img src={Icon} id="bansri-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                    <Banner id="bansri"> Bansari Patel </Banner>
                 </div>
                 <div>
-                    <Img src={Icon} id="bansri-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} style={{ backgroundColor: 'white' }} />
-                    <Banner id="bansri"> Bansari Patel </Banner>
+                    <Img src={Daniela} id="daniela-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                    <Banner id="daniela"> Daniela Phillips </Banner>
                 </div>
                 <div>
                     <Img src={Josh} id="joshua-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
                     <Banner id="joshua"> Joshua Malnati </Banner>
                 </div>
                 <div>
-                    <Img src={Bethany} id="bethany-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} style={{ backgroundColor: 'white' }} />
+                    <Img src={Bethany} id="bethany-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
                     <Banner id="bethany"> Bethany Duma </Banner>
                 </div>
-                <CoupleImg src={Couple} onClick={(e) => { OnClick(e.target as HTMLImageElement) }} style={{ height: '250px', width: '200px' }} />
-                <div>
-                    <Img src={Icon} id="kareem-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} style={{ backgroundColor: 'white' }} />
+                <CoupleImg src={Couple} onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                <div style={{ border: '1px solid grey' }}>
+                    <Img src={Icon} id="kareem-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
                     <Banner id="kareem"> Kareem Coleman </Banner>
                 </div>
                 <div>
@@ -136,13 +144,14 @@ export const BridalParty = () => {
                     <Banner id="brielle"> Brielle Coleman </Banner>
                 </div>
                 <div>
-                    <Img src={Luis} id="luis-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} style={{ backgroundColor: 'white' }} />
+                    <Img src={Luis} id="luis-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
                     <Banner id="luis"> Luis Figeroa </Banner>
                 </div>
                 <div>
-                    <Img src={Daniela} id="daniela-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="daniela"> Daniela Phillips </Banner>
+                    <Img src={David} id="david-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                    <Banner id="david"> David Tang </Banner>
                 </div>
+
             </Grid>
             <Honorees>
                 <BestpplContainer>

@@ -81,8 +81,7 @@ export const RSVP = () => {
         attending: false,
         name: '',
         phone: '',
-        email: '',
-        address: ''
+        email: ''
     });
 
     const onClick = () => {
@@ -97,39 +96,34 @@ export const RSVP = () => {
                     RSVP
                 </Title>
                 {
-                    filledOutForm ? (
+                    !filledOutForm ?
                         <Inputs>
-                <AcceptDecline>
-                        <div>
-                            <input type="radio" id="accept" name="acceptDecline" value='accept' onClick={(e) => setRsvp({...rsvp, attending: true})} />
-                            <label htmlFor="accept">Accepts with Pleasure</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="decline" name="acceptDecline" value='decline' onClick={(e) => setRsvp({...rsvp, attending: false})} />
-                            <label htmlFor="decline">Declines with Regret</label>
-                        </div>
-                    </AcceptDecline>
-                    <InputBox>
-                        <label htmlFor='name'>Name:</label>
-                        <input type="text" id="name" name="name" onChange={(e) => setRsvp({...rsvp, name: e.target.value})}></input>
-                    </InputBox>
-                    <InputBox>
-                        <label htmlFor='phone'>Phone Number:</label>
-                        <input type="text" id="phone" name="phone" onChange={(e) => setRsvp({...rsvp, phone: e.target.value})}></input>
-                    </InputBox>
-                    <InputBox>
-                        <label htmlFor='email'>Email Address:</label>
-                        <input type="text" id="email" name="email" onChange={(e) => setRsvp({...rsvp, email: e.target.value})}></input>
-                    </InputBox>
-                    <InputBox>
-                        <label htmlFor='mailing'>Mailing Address:</label>
-                        <textarea id="mailing" name="mailing" rows={5} onChange={(e) => setRsvp({...rsvp, address: e.target.value})}></textarea>
-                    </InputBox>
-                    <Button onClick={onClick}>Submit</Button>
-                </Inputs>
-                    ) : (
+                            <AcceptDecline>
+                                <div>
+                                    <input type="radio" id="accept" name="acceptDecline" value='accept' onClick={(e) => setRsvp({ ...rsvp, attending: true })} />
+                                    <label htmlFor="accept">Accepts with Pleasure</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="decline" name="acceptDecline" value='decline' onClick={(e) => setRsvp({ ...rsvp, attending: false })} />
+                                    <label htmlFor="decline">Declines with Regret</label>
+                                </div>
+                            </AcceptDecline>
+                            <InputBox>
+                                <label htmlFor='name'>Name:</label>
+                                <input type="text" id="name" name="name" onChange={(e) => setRsvp({ ...rsvp, name: e.target.value })}></input>
+                            </InputBox>
+                            <InputBox>
+                                <label htmlFor='phone'>Phone Number:</label>
+                                <input type="text" id="phone" name="phone" onChange={(e) => setRsvp({ ...rsvp, phone: e.target.value })}></input>
+                            </InputBox>
+                            <InputBox>
+                                <label htmlFor='email'>Email Address:</label>
+                                <input type="text" id="email" name="email" onChange={(e) => setRsvp({ ...rsvp, email: e.target.value })}></input>
+                            </InputBox>
+                            <Button onClick={onClick}>Submit</Button>
+                        </Inputs>
+                        :
                         <RsvpConfirmation>Thank you for your RSVP.</RsvpConfirmation>
-                    )
                 }
             </Form>
         </Container>

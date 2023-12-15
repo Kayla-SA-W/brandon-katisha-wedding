@@ -7,8 +7,14 @@ import { Timeline } from "../components/timeline/timeline";
 import { BridalParty } from "../components/bridal-party";
 import { RSVP } from "../components/rsvp";
 import { CanEnterContext } from "../context/can-enter-context";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { navigate } from "gatsby";
+
+const GlobalStyle = createGlobalStyle`
+body {
+    margin: 0;
+}
+`
 
 const Text = styled.p`
     font-family: 'Montserrat';
@@ -30,20 +36,20 @@ const Wedding = () => {
     const { canEnter } = useContext(CanEnterContext);
     if (canEnter) {
         return (
-            <main>
-                <BranKatish>
-                    <Intro />
-                    <Nav />
-                    <WeddingDetails />
-                    <GeometricShape>
-                        <Timeline />
-                    </GeometricShape>
-                    <HorizontalContainer>
-                        <BridalParty />
-                    </HorizontalContainer>
-                    <RSVP />
-                </BranKatish>
-            </main>
+            <>
+                <GlobalStyle />
+                <BranKatish />
+                <Nav />
+                <Intro />
+                <WeddingDetails />
+                <GeometricShape>
+                    <Timeline />
+                </GeometricShape>
+                <HorizontalContainer>
+                    <BridalParty />
+                </HorizontalContainer>
+                <RSVP />
+            </>
         )
     }
     return (

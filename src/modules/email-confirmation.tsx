@@ -5,7 +5,6 @@ export interface Rsvp {
     attending: boolean;
     phone: string;
     email: string;
-    address: string;
 }
 
 const attendingMessage = "We are so thankful that you will be able to join us on our special day! We are looking forward to celebrating with you.";
@@ -14,10 +13,9 @@ const notAttendingMessage = "We are so sorry that you will not be able to join u
 export const sendConfirmationEmail = (rsvp: Rsvp) => {
     emailjs.send("service_4oqeqrs", "template_mllsm37", {
         name: rsvp.name,
-        attending: rsvp.attending ? 'Will be attending' : 'Will not be attending',
+        attending: rsvp.attending ? 'will be attending' : 'will not be attending',
         phone: rsvp.phone,
-        email: rsvp.email,
-        address: rsvp.address
+        email: rsvp.email
     }, 'user_nY97bkcJucuzmbFNnsTFY');
 };
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon from '../images/temp-person.png';
-import Couple from '../images/couple.jpeg';
 import Alessa from '../images/bridal-party/alessa.jpg';
 import Bellanda from '../images/bridal-party/bellanda.jpg';
 import Bethany from '../images/bridal-party/bethany.jpg';
@@ -12,6 +10,8 @@ import Josh from '../images/bridal-party/josh.jpeg';
 import Luis from '../images/bridal-party/luis.jpg';
 import Harrison from '../images/bridal-party/harrison.jpeg';
 import Kayla from '../images/bridal-party/kayla.jpg';
+import Kareem from '../images/bridal-party/kareem.jpeg';
+import Bansari from '../images/bridal-party/bansari.jpeg';
 import "@fontsource/sacramento";
 import '@fontsource/montserrat';
 
@@ -34,11 +34,11 @@ const Container = styled.div`
 
 const Grid = styled.div`
     display: grid;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
     gap: 10px;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 200px 200px;
     @media screen and (max-width: 1024px){
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         gap: 0;
     }
@@ -74,20 +74,17 @@ const BestpplContainer = styled.div`
 const Bestppl = styled.div`
     display: flex;
     gap: 20px;
+    margin-bottom: 15px;
     @media screen and (max-width: 1024px){
         gap: 0;
     }
 `
 
-const Honorees = styled.div`
-    margin-top: 100px;
+const WeddingParty = styled.div`
     display: flex;
     gap: 100px;
     @media screen and (max-width: 1024px){
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-    
+      flex-direction: column;
     }
 `
 
@@ -96,14 +93,6 @@ const Label = styled.p`
     font-size: 30px;
     margin-bottom: 20px;
     color: #3C1114;
-`
-
-const CoupleImg = styled.img`
-    height: 200px;
-    width: 200px;
-@media screen and (max-width: 1024px){
-    display: none;
-}
 `
 
 // Kareem Coleman; David Tang; Joshua Malnati; Luis Figeroa;
@@ -116,71 +105,84 @@ export const BridalParty = () => {
     }
     return (
         <Container id="BridalParty">
-            <Title> Bridal Party </Title>
-            <Grid>
-                <div style={{ border: '1px solid grey' }}>
-                    <Img src={Icon} id="bansri-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="bansri"> Bansari Patel </Banner>
-                </div>
+            <Title> Wedding Party </Title>
+            <WeddingParty>
                 <div>
-                    <Img src={Daniela} id="daniela-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="daniela"> Daniela Phillips </Banner>
-                </div>
-                <div>
-                    <Img src={Josh} id="joshua-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="joshua"> Joshua Malnati </Banner>
-                </div>
-                <div>
-                    <Img src={Bethany} id="bethany-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="bethany"> Bethany Duma </Banner>
-                </div>
-                <CoupleImg src={Couple} onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                <div style={{ border: '1px solid grey' }}>
-                    <Img src={Icon} id="kareem-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="kareem"> Kareem Coleman </Banner>
-                </div>
-                <div>
-                    <Img src={Brielle} id="brielle-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="brielle"> Brielle Coleman </Banner>
-                </div>
-                <div>
-                    <Img src={Luis} id="luis-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="luis"> Luis Figeroa </Banner>
-                </div>
-                <div>
-                    <Img src={David} id="david-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                    <Banner id="david"> David Tang </Banner>
-                </div>
+                    <BestpplContainer>
+                        <Label>Best People</Label>
+                        <Bestppl>
+                            <div>
+                                <Img src={Kayla} honor id="kayla-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="kayla"> Kayla Williams </Banner>
+                            </div>
+                            <div>
+                                <Img src={Harrison} honor id="harrison-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="harrison"> Harrison Ogbewe </Banner>
+                            </div>
+                        </Bestppl>
+                    </BestpplContainer>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <Label>Groomsmen</Label>
+                        <Grid>
+                            <div>
+                                <Img src={Josh} id="joshua-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="joshua"> Joshua Malnati </Banner>
+                            </div>
 
-            </Grid>
-            <Honorees>
-                <BestpplContainer>
-                    <Label>Maids of Honor</Label>
-                    <Bestppl>
-                        <div>
-                            <Img src={Alessa} honor id="alessa-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                            <Banner id="alessa"> Alessa Moore </Banner>
-                        </div>
-                        <div>
-                            <Img src={Bellanda} honor id="bellanda-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                            <Banner id="bellanda"> Bellanda Bellegarde </Banner>
-                        </div>
-                    </Bestppl>
-                </BestpplContainer>
-                <BestpplContainer>
-                    <Label>Best People</Label>
-                    <Bestppl>
-                        <div>
-                            <Img src={Kayla} honor id="kayla-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                            <Banner id="kayla"> Kayla Williams </Banner>
-                        </div>
-                        <div>
-                            <Img src={Harrison} honor id="harrison-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
-                            <Banner id="harrison"> Harrison Ogbewe </Banner>
-                        </div>
-                    </Bestppl>
-                </BestpplContainer>
-            </Honorees>
+                            <div>
+                                <Img src={Kareem} id="kareem-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="kareem"> Kareem Coleman </Banner>
+                            </div>
+
+                            <div>
+                                <Img src={Luis} id="luis-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="luis"> Luis Figeroa </Banner>
+                            </div>
+                            <div>
+                                <Img src={David} id="david-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="david"> David Tang </Banner>
+                            </div>
+
+                        </Grid>
+                    </div>
+                </div>
+                <div>
+                    <BestpplContainer>
+                        <Label>Maids of Honor</Label>
+                        <Bestppl>
+                            <div>
+                                <Img src={Alessa} honor id="alessa-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="alessa"> Alessa Moore </Banner>
+                            </div>
+                            <div>
+                                <Img src={Bellanda} honor id="bellanda-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="bellanda"> Bellanda Bellegarde </Banner>
+                            </div>
+                        </Bestppl>
+                    </BestpplContainer>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <Label>Bridesmaids</Label>
+                        <Grid>
+                            <div>
+                                <Img src={Bansari} id="bansari-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="bansari"> Bansari Patel </Banner>
+                            </div>
+                            <div>
+                                <Img src={Daniela} id="daniela-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="daniela"> Daniela Phillips </Banner>
+                            </div>
+                            <div>
+                                <Img src={Bethany} id="bethany-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="bethany"> Bethany Duma </Banner>
+                            </div>
+                            <div>
+                                <Img src={Brielle} id="brielle-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Banner id="brielle"> Brielle Coleman </Banner>
+                            </div>
+                        </Grid>
+                    </div>
+                </div>
+            </WeddingParty>
         </Container>
     )
 }

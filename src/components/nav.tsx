@@ -14,7 +14,8 @@ const Container = styled.div`
     padding: 25px 0;
    @media screen and (max-width: 1024px){
         width: 100%;
-        gap: 15px; 
+        gap: 10px; 
+        
     }
 `;
 
@@ -27,7 +28,7 @@ const Button = styled(Link)`
         font-size: 12px;
     }
 `
-const Photos = styled(Button)`
+const HidingButton = styled(Button)`
 @media screen and (max-width: 1024px){
       display: none;  
 }
@@ -35,7 +36,7 @@ const Photos = styled(Button)`
 
 const HR = styled.hr`
     border: 1px solid #3C1114;
-    width: 25%;
+    width: 15%;
     @media screen and (max-width: 1024px){
         display: none;  
     }
@@ -46,8 +47,9 @@ export const Nav = () => (
         <Container>
             <HR />
             <Button to='#Details'>Wedding Details</Button>
-            <Photos to='#Photos'>Photos</Photos>
-            <Button to='#BridalParty'>Bridal Party</Button>
+            <HidingButton to='#Photos'>Photos</HidingButton>
+            <HidingButton to='#BridalParty'>Bridal Party</HidingButton>
+            <Button to='#Accommodations'>Accommodations</Button>
             <Button to='#Registry'>Registry</Button>
             <Button to='#RSVP'>RSVP</Button>
             <HR />

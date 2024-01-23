@@ -51,7 +51,7 @@ export const Nav = () => (
             <HidingButton to='#BridalParty'>Bridal Party</HidingButton>
             <Button to='#Accommodations'>Accommodations</Button>
             <Button to='#Registry'>Registry</Button>
-            <Button to='#RSVP'>RSVP</Button>
+            <Button to='#FAQ'>FAQ</Button>
             <HR />
         </Container>
     </>

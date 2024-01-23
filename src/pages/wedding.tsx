@@ -5,10 +5,11 @@ import { Nav } from "../components/nav";
 import { WeddingDetails } from "../components/wedding-details";
 import { Timeline } from "../components/timeline/timeline";
 import { BridalParty } from "../components/bridal-party";
-import { RSVP } from "../components/rsvp";
 import { CanEnterContext } from "../context/can-enter-context";
 import styled, { createGlobalStyle } from "styled-components";
 import { navigate } from "gatsby";
+import { FAQ } from "../components/faq";
+import { Accommodations } from "../components/Accommodations";
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -48,7 +49,12 @@ const Wedding = () => {
                 <HorizontalContainer>
                     <BridalParty />
                 </HorizontalContainer>
-                <RSVP />
+                <HorizontalContainer>
+                    <Accommodations />
+                </HorizontalContainer>
+                <HorizontalContainer>
+                <FAQ />
+                </HorizontalContainer>
             </>
         )
     }

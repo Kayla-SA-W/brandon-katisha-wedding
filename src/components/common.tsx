@@ -42,3 +42,19 @@ export const VerticalContainer = styled.div`
     background-color: white;
     padding: 50px 0;
 `
+
+export const Title = styled.h2`
+    font-family: 'Montserrat';
+    color: #3C1114;
+    font-weight: 700;
+    font-size: 30px;
+`;
+
+export const DetailsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: 1024px){
+        flex-direction: column;
+    }
+`;

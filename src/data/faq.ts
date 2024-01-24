@@ -28,10 +28,6 @@ export const faq = [
         answer: "For the ceremony, we would love to have an unplugged atmosphere where guests can fully experience the moment without distractions. You're welcome to take photos during the reception."
     },
     {
-        question: 'How do I RSVP?',
-        answer: "Formal invitations have not been sent. Approximately 3 months before the weddings invites will be sent and that's where you will get your opportunity to RSVP."
-    },
-    {
         question: 'Do you have a wedding hashtag?',
         answer: 'Of course we do! #ForeverPhillips'
     }

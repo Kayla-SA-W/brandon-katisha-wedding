@@ -130,10 +130,9 @@ export const Accommodations = () => (
                 <Paragraph >
                     4.4 miles away from the venue
                 </Paragraph>
-                <Paragraph>
-                    We do NOT have a hotel block here.
-                </Paragraph>
-                <Link to='https://www.hilton.com/en/hotels/boswkht-home2-suites-walpole-foxboro/?SEO_id=GMB-AMER-HT-BOSWKHT&y_source=1_OTQwMzQzOS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D' target="_blank"> Click here to book a room</Link>
+                <Link to='https://www.hilton.com/en/attend-my-event/boswkht-bel-6abce031-2fc7-46ff-acbc-f3313aa66b4a/' target="_blank">Click here to book a room under our hotel block</Link>
+                <br />
+                <Paragraph>Price: $189/night </Paragraph>
             </HotelBlock>
 
             {/* Hotel 5 */}

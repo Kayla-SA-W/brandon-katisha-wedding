@@ -10,7 +10,7 @@ import Josh from '../images/bridal-party/josh.jpeg';
 import Luis from '../images/bridal-party/luis.jpg';
 import Harrison from '../images/bridal-party/harrison.jpeg';
 import Kayla from '../images/bridal-party/kayla.jpg';
-import Kareem from '../images/bridal-party/kareem.png';
+import Kareem from '../images/bridal-party/kareem.jpeg';
 import Bansari from '../images/bridal-party/bansari.jpeg';
 import "@fontsource/sacramento";
 import '@fontsource/montserrat';

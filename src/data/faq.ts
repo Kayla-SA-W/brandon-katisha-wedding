@@ -20,10 +20,6 @@ export const faq = [
         answer: "Yes. Click the tab “Accommodations” to see hotel choices."
     },
     {
-        question: 'Will there be an open bar?',
-        answer: "The cocktail hour will have an open bar. During the reception, our celebration will have a cash bar, so guests can purchase their preferred drinks. We can't wait to raise a toast with you!"
-    },
-    {
         question: 'Am I allowed to take photos at your wedding?',
         answer: "For the ceremony, we would love to have an unplugged atmosphere where guests can fully experience the moment without distractions. You're welcome to take photos during the reception."
     },

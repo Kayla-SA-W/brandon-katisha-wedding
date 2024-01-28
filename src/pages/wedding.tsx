@@ -10,6 +10,8 @@ import styled, { createGlobalStyle } from "styled-components";
 import { navigate } from "gatsby";
 import { FAQ } from "../components/faq";
 import { Accommodations } from "../components/Accommodations";
+import { Registry } from "../components/registry";
+
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -52,8 +54,12 @@ const Wedding = () => {
                 <HorizontalContainer>
                     <Accommodations />
                 </HorizontalContainer>
+                
                 <HorizontalContainer>
-                <FAQ />
+                    <Registry />
+                </HorizontalContainer>
+                <HorizontalContainer>
+                    <FAQ />
                 </HorizontalContainer>
             </>
         )

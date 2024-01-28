@@ -29,7 +29,7 @@ const TheRing = styled.img`
 
 const Text = styled.p<{top?: boolean; bottom?:boolean}>`
     font-family: 'Montserrat';
-    font-size: 15px;
+    font-size: 20px;
     color: #3C1114;
     margin-top: ${(props) => ( props.top ? 0 : 15)};
     margin-bottom: ${(props) => ( props.bottom ? 0 : 15)};
@@ -57,7 +57,12 @@ export const WeddingDetails = () => (
             <Text bottom>Avenir</Text>
             <Text top>1601 Main Street, Walpole, MA 02081</Text>
             <Text bottom>Thursday, July 25th, 2024</Text>
-            <Text top>4:30 PM</Text>
+            <br />
+            <br />
+            <Text bottom>Order of Events </Text>
+            <br />
+            <Text bottom>5:00 PM Ceremony</Text>
+            <Text bottom>6:00 PM Reception</Text>
             </Box>
             <TheRing src={Ring} />
         </DetailsContainer>

@@ -62,7 +62,13 @@ const Title = styled.h4`
 `
 
 const Banner = styled.div`
-    display: none;
+bottom: 50px;
+position: relative;
+background-color: rgba( 225,225,225, 0.5 );
+display: flex;
+align-items: center;
+justify-content: center;
+}
 `
 
 const BestpplContainer = styled.div`
@@ -95,13 +101,16 @@ const Label = styled.p`
     color: #3C1114;
 `
 
+
+
+
 // Kareem Coleman; David Tang; Joshua Malnati; Luis Figeroa;
 // Bansari Patel; Daniela Phillips; Bethany Duma; Brielle Bellegarde
 export const BridalParty = () => {
 
     const OnClick = (element: HTMLImageElement) => {
         const name = (element.id).slice(0, -4);
-        document.getElementById(name)?.classList.toggle('visible');
+        // document.getElementById(name)?.classList.toggle('visible');
     }
     return (
         <Container id="BridalParty">

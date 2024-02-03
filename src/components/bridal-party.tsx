@@ -1,19 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Alessa from '../images/bridal-party/alessa.jpg';
-import Bellanda from '../images/bridal-party/bellanda.jpg';
-import Bethany from '../images/bridal-party/bethany.jpg';
-import Brielle from '../images/bridal-party/brielle.jpg';
-import David from '../images/bridal-party/david.jpg';
-import Daniela from '../images/bridal-party/daniela.jpg';
-import Josh from '../images/bridal-party/josh.jpeg';
-import Luis from '../images/bridal-party/luis.jpg';
-import Harrison from '../images/bridal-party/harrison.jpeg';
-import Kayla from '../images/bridal-party/kayla.jpg';
-import Kareem from '../images/bridal-party/kareem.jpeg';
-import Bansari from '../images/bridal-party/bansari.jpeg';
 import "@fontsource/sacramento";
 import '@fontsource/montserrat';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Container = styled.div`
     display: flex;
@@ -41,17 +30,6 @@ const Grid = styled.div`
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         gap: 0;
-    }
-`
-
-const Img = styled.img<{ honor?: boolean }>`
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
-    background-color: ${(props) => (props.honor ? 'white' : '')};
-    @media screen and (max-width: 1024px){
-        height: 100%;
-        width: 50vw;
     }
 `
 
@@ -101,12 +79,13 @@ const Label = styled.p`
     color: #3C1114;
 `
 
-
-
-
 // Kareem Coleman; David Tang; Joshua Malnati; Luis Figeroa;
 // Bansari Patel; Daniela Phillips; Bethany Duma; Brielle Bellegarde
 export const BridalParty = () => {
+    const imageStyle = {
+        height: '200px',
+        maxWidth: '200px'
+    };
     return (
         <Container id="BridalParty">
             <Title> Wedding Party </Title>
@@ -116,11 +95,11 @@ export const BridalParty = () => {
                         <Label>Best People</Label>
                         <Bestppl>
                             <div>
-                                <Img src={Kayla} honor id="kayla-img"/>
+                                <StaticImage src='../images/bridal-party/kayla.jpg' alt='kayla' style={imageStyle} />
                                 <Banner id="kayla"> Kayla Williams </Banner>
                             </div>
                             <div>
-                                <Img src={Harrison} honor id="harrison-img"/>
+                                <StaticImage src='../images/bridal-party/harrison.jpeg' alt='harrison' style={imageStyle} />
                                 <Banner id="harrison"> Harrison Ogbewe </Banner>
                             </div>
                         </Bestppl>
@@ -129,21 +108,21 @@ export const BridalParty = () => {
                         <Label>Groomsmen</Label>
                         <Grid>
                             <div>
-                                <Img src={Josh} id="joshua-img"/>
+                                <StaticImage src='../images/bridal-party/josh.jpeg' alt="joshua" style={imageStyle} />
                                 <Banner id="joshua"> Joshua Malnati </Banner>
                             </div>
 
                             <div>
-                                <Img src={Kareem} id="kareem-img"/>
+                                <StaticImage src='../images/bridal-party/kareem.jpeg' alt="kareem" style={imageStyle} />
                                 <Banner id="kareem"> Kareem Coleman </Banner>
                             </div>
 
                             <div>
-                                <Img src={Luis} id="luis-img"/>
+                                <StaticImage src='../images/bridal-party/luis.jpg' alt="luis" style={imageStyle} />
                                 <Banner id="luis"> Luis Figeroa </Banner>
                             </div>
                             <div>
-                                <Img src={David} id="david-img"/>
+                                <StaticImage src='../images/bridal-party/david.jpg' alt="david" style={imageStyle} />
                                 <Banner id="david"> David Tang </Banner>
                             </div>
 
@@ -155,11 +134,11 @@ export const BridalParty = () => {
                         <Label>Maids of Honor</Label>
                         <Bestppl>
                             <div>
-                                <Img src={Alessa} honor id="alessa-img"/>
+                                <StaticImage src='../images/bridal-party/alessa.jpg' alt="alessa" style={imageStyle} />
                                 <Banner id="alessa"> Alessa Moore </Banner>
                             </div>
                             <div>
-                                <Img src={Bellanda} honor id="bellanda-img"/>
+                                <StaticImage src='../images/bridal-party/bellanda.jpg' alt="bellanda" style={imageStyle} />
                                 <Banner id="bellanda"> Bellanda Bellegarde </Banner>
                             </div>
                         </Bestppl>
@@ -168,19 +147,19 @@ export const BridalParty = () => {
                         <Label>Bridesmaids</Label>
                         <Grid>
                             <div>
-                                <Img src={Bansari} id="bansari-img"/>
+                                <StaticImage src='../images/bridal-party/bansari.jpeg' alt="bansari" style={imageStyle} />
                                 <Banner id="bansari"> Bansari Patel </Banner>
                             </div>
                             <div>
-                                <Img src={Daniela} id="daniela-img"/>
+                                <StaticImage src='../images/bridal-party/daniela.jpg' alt='daniela' style={imageStyle} />
                                 <Banner id="daniela"> Daniela Phillips </Banner>
                             </div>
                             <div>
-                                <Img src={Bethany} id="bethany-img"/>
+                                <StaticImage src='../images/bridal-party/bethany.jpg' alt='bethany' style={imageStyle} />
                                 <Banner id="bethany"> Bethany Duma </Banner>
                             </div>
                             <div>
-                                <Img src={Brielle} id="brielle-img"/>
+                                <StaticImage src='../images/bridal-party/brielle.jpg' alt='brielle' style={imageStyle} />
                                 <Banner id="brielle"> Brielle Coleman </Banner>
                             </div>
                         </Grid>

@@ -5,11 +5,18 @@ import styled from 'styled-components';
 import Ring from '../images/ring.png';
 
 const Title = styled.h2`
-    font-family: 'Montserrat';
+    font-family: 'sacramento';
     color: #3C1114;
-    font-weight: 700;
-    font-size: 30px;
+    font-size: 50px;
 `;
+
+const Label = styled.p`
+    font-family: 'Montserrat';
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #3C1114;
+    font-weight:700;
+`
 
 const DetailsContainer = styled.div`
     display: flex;
@@ -27,12 +34,12 @@ const TheRing = styled.img`
     }
 `
 
-const Text = styled.p<{top?: boolean; bottom?:boolean}>`
+const Text = styled.p<{ top?: boolean; bottom?: boolean }>`
     font-family: 'Montserrat';
     font-size: 20px;
     color: #3C1114;
-    margin-top: ${(props) => ( props.top ? 0 : 15)};
-    margin-bottom: ${(props) => ( props.bottom ? 0 : 15)};
+    margin-top: ${(props) => (props.top ? 0 : 15)};
+    margin-bottom: ${(props) => (props.bottom ? 0 : 15)};
 `
 
 const Hr = styled.hr`
@@ -52,17 +59,17 @@ export const WeddingDetails = () => (
     <HorizontalContainer id='Details'>
         <DetailsContainer>
             <Box>
-            <Title> The Wedding </Title>
-            <Hr />
-            <Text bottom>Avenir</Text>
-            <Text top>1601 Main Street, Walpole, MA 02081</Text>
-            <Text bottom>Thursday, July 25th, 2024</Text>
-            <br />
-            <br />
-            <Text bottom>Order of Events </Text>
-            <br />
-            <Text bottom>5:00 PM Ceremony</Text>
-            <Text bottom>6:00 PM Reception</Text>
+                <Title> The Wedding </Title>
+                <Hr />
+                <Label>Location</Label>
+                <Text bottom>Avenir</Text>
+                <Text top>1601 Main Street, Walpole, MA 02081</Text>
+                <Text bottom>Thursday, July 25th, 2024</Text>
+                <br />
+                <br />
+                <Label>Order of Events</Label>
+                <Text bottom>5:00 PM Ceremony</Text>
+                <Text bottom>6:00 PM Reception</Text>
             </Box>
             <TheRing src={Ring} />
         </DetailsContainer>

@@ -24,6 +24,12 @@ const Celebrate = styled.div`
     font-family: 'Montserrat';
     font-size: 20px;
     color: rgba(255,255,255, 0.6);
+`;
+
+const Hashtag = styled(Celebrate)`
+@media screen and (max-width: 1024px){
+    margin-top: 50px;
+}
 `
 
 const NumberBox = styled.div`
@@ -114,7 +120,7 @@ return (
                     <Celebrate>Seconds</Celebrate>
                 </NumberBox>
             </Box>
-            <Celebrate>Until We Are #ForeverPhillips</Celebrate>
+            <Hashtag>Until We Are #ForeverPhillips</Hashtag>
         </Names>
     </>
 )

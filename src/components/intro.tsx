@@ -51,7 +51,6 @@ const Box = styled.div`
         gap: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 100px;
     }
 `
 
@@ -60,6 +59,14 @@ const Number = styled.p`
     font-family: 'Montserrat';
     @media screen and (max-width: 1024px){
         font-size: 20px;
+    }
+`
+
+const Spacer = styled.div`
+    display: none;
+    @media screen and (max-width: 1024px){
+        display: block;
+        height: 50px;
     }
 `
 
@@ -115,6 +122,7 @@ return (
                     <Celebrate>Seconds</Celebrate>
                 </NumberBox>
             </Box>
+            <Spacer />
             <Celebrate>Until We Are #ForeverPhillips</Celebrate>
         </Names>
     </>

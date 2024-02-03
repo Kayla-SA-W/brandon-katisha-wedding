@@ -26,6 +26,12 @@ const Celebrate = styled.div`
     color: rgba(255,255,255, 0.6);
 `;
 
+const Hashtag = styled.div`
+    @media screen and (max-width: 1024px){
+        margin-top: 100px;
+    }
+`;
+
 const NumberBox = styled.div`
     border: 1px solid white;
     width: 200px;
@@ -62,14 +68,6 @@ const Number = styled.p`
     }
 `
 
-const Spacer = styled.div`
-    display: none;
-    @media screen and (max-width: 1024px){
-        display: block;
-        height: 50px;
-    }
-`
-
 export const Intro = () => {
     const weddingDate = new Date("Jul 25, 2024").getTime();
 
@@ -100,31 +98,30 @@ export const Intro = () => {
         })
     }
 
-return (
-    <>
-        <Names> Brandon & Katisha
-            <Celebrate style={{ marginTop: '50px' }}> Walpole, MA | July 25th, 2024</Celebrate>
-            <Box>
-                <NumberBox onClick={OnClick}>
-                    <Number>{days}</Number>
-                    <Celebrate>Days</Celebrate>
-                </NumberBox>
-                <NumberBox onClick={OnClick}>
-                    <Number>{hours}</Number>
-                    <Celebrate>Hours</Celebrate>
-                </NumberBox>
-                <NumberBox onClick={OnClick}>
-                    <Number>{minutes}</Number>
-                    <Celebrate>Minutes</Celebrate>
-                </NumberBox>
-                <NumberBox onClick={OnClick}>
-                    <Number>{seconds}</Number>
-                    <Celebrate>Seconds</Celebrate>
-                </NumberBox>
-            </Box>
-            <Spacer />
-            <Celebrate>Until We Are #ForeverPhillips</Celebrate>
-        </Names>
-    </>
-)
+    return (
+        <>
+            <Names> Brandon & Katisha
+                <Celebrate style={{ marginTop: '50px' }}> Walpole, MA | July 25th, 2024</Celebrate>
+                <Box>
+                    <NumberBox onClick={OnClick}>
+                        <Number>{days}</Number>
+                        <Celebrate>Days</Celebrate>
+                    </NumberBox>
+                    <NumberBox onClick={OnClick}>
+                        <Number>{hours}</Number>
+                        <Celebrate>Hours</Celebrate>
+                    </NumberBox>
+                    <NumberBox onClick={OnClick}>
+                        <Number>{minutes}</Number>
+                        <Celebrate>Minutes</Celebrate>
+                    </NumberBox>
+                    <NumberBox onClick={OnClick}>
+                        <Number>{seconds}</Number>
+                        <Celebrate>Seconds</Celebrate>
+                    </NumberBox>
+                </Box>
+                <Hashtag>Until We Are #ForeverPhillips</Hashtag>
+            </Names>
+        </>
+    )
 }

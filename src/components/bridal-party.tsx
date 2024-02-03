@@ -107,11 +107,6 @@ const Label = styled.p`
 // Kareem Coleman; David Tang; Joshua Malnati; Luis Figeroa;
 // Bansari Patel; Daniela Phillips; Bethany Duma; Brielle Bellegarde
 export const BridalParty = () => {
-
-    const OnClick = (element: HTMLImageElement) => {
-        const name = (element.id).slice(0, -4);
-        // document.getElementById(name)?.classList.toggle('visible');
-    }
     return (
         <Container id="BridalParty">
             <Title> Wedding Party </Title>
@@ -121,11 +116,11 @@ export const BridalParty = () => {
                         <Label>Best People</Label>
                         <Bestppl>
                             <div>
-                                <Img src={Kayla} honor id="kayla-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Kayla} honor id="kayla-img"/>
                                 <Banner id="kayla"> Kayla Williams </Banner>
                             </div>
                             <div>
-                                <Img src={Harrison} honor id="harrison-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Harrison} honor id="harrison-img"/>
                                 <Banner id="harrison"> Harrison Ogbewe </Banner>
                             </div>
                         </Bestppl>
@@ -134,21 +129,21 @@ export const BridalParty = () => {
                         <Label>Groomsmen</Label>
                         <Grid>
                             <div>
-                                <Img src={Josh} id="joshua-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Josh} id="joshua-img"/>
                                 <Banner id="joshua"> Joshua Malnati </Banner>
                             </div>
 
                             <div>
-                                <Img src={Kareem} id="kareem-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Kareem} id="kareem-img"/>
                                 <Banner id="kareem"> Kareem Coleman </Banner>
                             </div>
 
                             <div>
-                                <Img src={Luis} id="luis-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Luis} id="luis-img"/>
                                 <Banner id="luis"> Luis Figeroa </Banner>
                             </div>
                             <div>
-                                <Img src={David} id="david-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={David} id="david-img"/>
                                 <Banner id="david"> David Tang </Banner>
                             </div>
 
@@ -160,11 +155,11 @@ export const BridalParty = () => {
                         <Label>Maids of Honor</Label>
                         <Bestppl>
                             <div>
-                                <Img src={Alessa} honor id="alessa-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Alessa} honor id="alessa-img"/>
                                 <Banner id="alessa"> Alessa Moore </Banner>
                             </div>
                             <div>
-                                <Img src={Bellanda} honor id="bellanda-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Bellanda} honor id="bellanda-img"/>
                                 <Banner id="bellanda"> Bellanda Bellegarde </Banner>
                             </div>
                         </Bestppl>
@@ -173,19 +168,19 @@ export const BridalParty = () => {
                         <Label>Bridesmaids</Label>
                         <Grid>
                             <div>
-                                <Img src={Bansari} id="bansari-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Bansari} id="bansari-img"/>
                                 <Banner id="bansari"> Bansari Patel </Banner>
                             </div>
                             <div>
-                                <Img src={Daniela} id="daniela-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Daniela} id="daniela-img"/>
                                 <Banner id="daniela"> Daniela Phillips </Banner>
                             </div>
                             <div>
-                                <Img src={Bethany} id="bethany-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Bethany} id="bethany-img"/>
                                 <Banner id="bethany"> Bethany Duma </Banner>
                             </div>
                             <div>
-                                <Img src={Brielle} id="brielle-img" onClick={(e) => { OnClick(e.target as HTMLImageElement) }} />
+                                <Img src={Brielle} id="brielle-img"/>
                                 <Banner id="brielle"> Brielle Coleman </Banner>
                             </div>
                         </Grid>

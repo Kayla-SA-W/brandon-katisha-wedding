@@ -26,10 +26,12 @@ const Celebrate = styled.div`
     color: rgba(255,255,255, 0.6);
 `;
 
-const Hashtag = styled.div`
-    @media screen and (max-width: 1024px){
-        margin-top: 100px;
-    }
+const Hashtag = styled(Celebrate)`
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
 `;
 
 const NumberBox = styled.div`
@@ -120,8 +122,8 @@ export const Intro = () => {
                         <Celebrate>Seconds</Celebrate>
                     </NumberBox>
                 </Box>
-                <Hashtag>Until We Are #ForeverPhillips</Hashtag>
             </Names>
+            <Hashtag>Until We Are #ForeverPhillips</Hashtag>
         </>
     )
 }

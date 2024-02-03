@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BranKatish, GeometricShape, HorizontalContainer } from "../components/common";
 import { Intro } from "../components/intro";
 import { Nav } from "../components/nav";
@@ -11,6 +11,7 @@ import { navigate } from "gatsby";
 import { FAQ } from "../components/faq";
 import { Accommodations } from "../components/Accommodations";
 import { Registry } from "../components/registry";
+import { HeartLoader } from "../components/heart-loader";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -36,7 +37,22 @@ const Button = styled.button`
 `
 
 const Wedding = () => {
+    const [showComponent, setShowComponent] = useState(false); 
+ 
+  useEffect(() => { 
+    const timeout = setTimeout(() => { 
+      setShowComponent(true); 
+    }, 3000); 
+ 
+    return () => clearTimeout(timeout); 
+  }, []); 
+
     const { canEnter } = useContext(CanEnterContext);
+    if(!showComponent) {
+        return (
+            <HeartLoader />
+        )
+    }
     if (canEnter) {
         return (
             <>

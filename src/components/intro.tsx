@@ -51,7 +51,7 @@ const Box = styled.div`
         gap: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 `
 

@@ -26,7 +26,10 @@ const Celebrate = styled.div`
     color: rgba(255,255,255, 0.6);
 `;
 
-const Hashtag = styled(Celebrate)`
+const Hashtag = styled.div`
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: rgba(255,255,255, 0.6);
     color: white;
     display: flex;
     align-items: center;

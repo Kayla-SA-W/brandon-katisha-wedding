@@ -1,3 +1,5 @@
+import React from "react";
+
 export const faq = [
     {
         question: 'Is there  a dress code?',
@@ -9,7 +11,7 @@ export const faq = [
     },
     {
         question: 'Are children welcome?',
-        answer: "While we adore children, we've decided to host an adults-only celebration. We hope you understand and can make arrangements for a night out. We appreciate your support!"
+        answer: <p>While we adore children, we've decided to host an <em><b>adults-only celebration</b></em>. We hope you understand and can make arrangements for a night out. We appreciate your support!</p>
     },
     {
         question: 'Is there parking available near your wedding venue(s)?',
@@ -21,7 +23,7 @@ export const faq = [
     },
     {
         question: 'Am I allowed to take photos at your wedding?',
-        answer: "For the ceremony, we would love to have an unplugged atmosphere where guests can fully experience the moment without distractions. You're welcome to take photos during the reception."
+        answer: "For the ceremony, we will have an unplugged atmosphere where guests can fully experience the moment without distractions. You're welcome to take photos during the reception."
     },
     {
         question: 'Do you have a wedding hashtag?',

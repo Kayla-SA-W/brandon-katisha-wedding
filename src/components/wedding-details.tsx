@@ -68,7 +68,7 @@ export const WeddingDetails = () => (
                 <br />
                 <br />
                 <Label>Order of Events</Label>
-                <Text bottom>5:00 PM Ceremony</Text>
+                <Text bottom>4:00 PM Ceremony</Text>
                 <Text bottom>6:00 PM Reception</Text>
             </Box>
             <TheRing src={Ring} />

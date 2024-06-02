@@ -131,15 +131,11 @@ export const BridalParty = () => {
                 </div>
                 <div>
                     <BestpplContainer>
-                        <Label>Maids of Honor</Label>
+                        <Label>Maid of Honor</Label>
                         <Bestppl>
                             <div>
                                 <StaticImage src='../images/bridal-party/alessa.jpg' alt="alessa" style={imageStyle} />
                                 <Banner id="alessa"> Alessa Moore </Banner>
-                            </div>
-                            <div>
-                                <StaticImage src='../images/bridal-party/bellanda.jpg' alt="bellanda" style={imageStyle} />
-                                <Banner id="bellanda"> Bellanda Bellegarde </Banner>
                             </div>
                         </Bestppl>
                     </BestpplContainer>
